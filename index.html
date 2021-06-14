@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love to skate</title>
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- to render elemnts -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link 
+       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+       rel="stylesheet">
+    <link rel = "icon"
+      href = "https://image.flaticon.com/icons/png/128/2419/2419784.png" 
+      type = "image/icon">
+</head>
+<body>
+    <!-- start header -->
+    <section>
+
+        
+        
+        <nav class="navbar">
+           <div><a href="index.html"class="brand">Inline skate shop</a></div>
+            <a href="#"class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              
+            </a>
+            
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Main page</a></li>
+                    <li><a href="index ii.html">History of skating</a></li>
+                    <li><a href="index iii.html">Brands</a></li>
+                    <li><a href="index iv.html">Skate in Egypt</a></li>
+                    <li><a href="index v.html">Registration</a></li>
+                </ul>
+            </div>
+         </nav>   
+        <!-- start landing -->
+        <div class="landing">
+            <div class="intro">
+                <h2>Love to skate</h2>
+                <p>We Skate for fun - not for fame...</p>
+            </div>
+        </div>
+        
+    </section>
+    
+    <script>
+       const togglebutton = document.getElementsByClassName('toggle-button')[0]
+    const navbarlinks = document.getElementsByClassName('navbar-links')[0]
+    
+    togglebutton.addEventListener('click',()=>{
+        navbarlinks.classList.toggle('active')
+    })
+        </script>
+
+
+</body>
+</html>

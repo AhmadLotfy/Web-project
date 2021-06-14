@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love to skate</title>
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/index v.css">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- to render elemnts -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link 
+       href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+       rel="stylesheet">
+    <link rel = "icon"
+      href = "https://image.flaticon.com/icons/png/128/2419/2419784.png" 
+      type = "image/icon">
+      
+</head>
+<body>
+    <!-- start header -->
+    <section>
+    
+
+        <nav class="navbar">
+           <div><a href="index.html"class="brand">Inline skate shop</a></div>
+            <a href="#"class="toggle-button">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+              
+            </a>
+            
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">Main page</a></li>
+                    <li><a href="index ii.html">History of skating</a></li>
+                    <li><a href="index iii.html">Brands</a></li>
+                    <li><a href="index iv.html">Skate in Egypt</a></li>
+                    <li><a href="index v.html">Registration</a></li>
+                </ul>
+            </div>
+         </nav>   
+    <div class="form">
+        <div class="con">
+       <P>Order your SKATES now!</P>  
+    <form method="GET" onsubmit="return verifyPassword()" action="index vi.html">
+        <table>
+         
+            <tr>
+                <td><label for="a"> 1st name</label>
+              <br> Put your 1st name </td>
+                <td><input id="a" type="text"name="fname" required placeholder="first name"></td>
+            </tr>
+            <tr>
+                <td><label for="b"> last name</label>
+              <br> put your last name </td>
+                <td><input id="b" type="text"name="lname"required placeholder="last name"></td>
+            </tr>
+            <tr>
+                <td><label for="pswd"> password</label>
+                    <br>begin by uppercase:<br>Have no spaces<br>,contain digits, special chars<br>,lowercase<br>8 characters</td>
+                <td><input id="pswd" type="password"name="pass"required placeholder="password" autocomplete="off"onkeyup="passCheck(this.value)">
+                <span id="message"></span></td>
+            </tr>
+            <tr>
+                <td> <label for="d">email</label>
+                    <br>Put Your email </td> </td>
+                <td> <input id="d" type="email"name="name"required placeholder="@Email"></td>
+            
+            </tr>
+            <tr>
+                <td><label for="f">Mobile phone</label> 
+                    <br> start by 01 + 9digits </td></td>
+                <td> <input id="f" type="text"name="name"pattern="01+[0-9]{9}"required placeholder="01004850285"></td>
+               
+            </tr>
+            <tr>
+                <td> <label for="e">address</label></td>
+                <td>  <textarea id="e" placeholder="your address"name="subject"cols="13"rows="2" required></textarea></td>
+                
+            </tr>
+
+            <tr>
+                <td><label for="gender">gender</label>
+                    <select name="gender"id="gender"required>
+                        <option value="1">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </td>
+                    <td>
+                        <button type="submit">Place your order</button>
+                        
+                    </td>
+                </tr>
+        </table>
+    </form>
+</div>
+</div>
+<!-- type="text/javascript" -->
+
+    
+<script>
+        const togglebutton = document.getElementsByClassName('toggle-button')[0]
+     const navbarlinks = document.getElementsByClassName('navbar-links')[0]
+     
+     togglebutton.addEventListener('click',()=>{
+         navbarlinks.classList.toggle('active')
+     })
+    function verifyPassword() {  
+      var pw = document.getElementById("pswd").value;  
+      //check empty password field  
+      if(pw == "") {  
+         document.getElementById("message").innerHTML = "**Fill the password please!";  
+         return false;  
+      }  
+       
+     //minimum password length validation  
+      if(pw.length < 8) {  
+         document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
+         return false;  
+      }  
+      
+    //maximum length of password validation
+      if(pw.length > 8) {  
+         document.getElementById("message").innerHTML = "**Password length must not exceed 8 characters";  
+         return false;  
+      }
+      if (pw.search (/[0-9]/) == -1){
+        document.getElementById("message").innerHTML = "**Your Password needs a number";  
+        return false;   
+      }
+      if (pw.search (/[a-z]/) == -1){
+        document.getElementById("message").innerHTML = "**Your Password must contain a lowercase character";  
+        return false;   
+      }
+      if(pw.search(/[!@#$%^&*]/) == -1){
+        document.getElementById("message").innerHTML = "**Your Password needs a special character";  
+        return false;
+      }
+      if(pw.search(/[ ]/)!=-1){
+        document.getElementById("message").innerHTML = "**Your Password can't contain white spaces";
+        return false;
+      }
+      var first=pw.substr(0,1);
+      if(!(first.match(/[A-Z]/))){
+        document.getElementById("message").innerHTML = "**Your Password must start with an uppercase character";
+         return false;
+   }
+    }  
+    </script>
+</script>
+</body>
+</html>
